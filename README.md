@@ -15,7 +15,7 @@
 
   <hr>
 
-  # ![LINK](https://github.com/user-attachments/assets/60885b81-19de-4565-8a13-7ea996605924) Link de nosso site
+  # ![LINK](https://github.com/user-attachments/assets/60885b81-19de-4565-8a13-7ea996605924) Link de nosso site:
 
 
 
