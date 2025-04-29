@@ -4,6 +4,6 @@
 ![logo_grande_borda](https://github.com/user-attachments/assets/33d01a15-eb3f-46ac-b934-45214f653d82)
 <br>_logo da BitByte Commerce_ 
 
- 
+  <hr>
  # Códigos utilizados neste repositório
- <hr>
+
