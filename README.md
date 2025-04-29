@@ -8,4 +8,5 @@
   
  # Códigos usados neste repositório
  ![HTML](https://github.com/user-attachments/assets/3445911c-caa6-460b-8913-1b1beb395b9e)
+ Como código base utilizamos o Html para realizar todo o esqueleto e toda a base para o nosso site
 
