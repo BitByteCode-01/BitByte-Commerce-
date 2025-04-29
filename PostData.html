@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Empresas</title>
+
+    <link rel="stylesheet" href="Estilos/post.css">
+    <link rel="icon" href="Favicons/icons8-enterprise-50.png">
+</head>
+<body>
+    <div class="container">
+<a href="index.html"><button class="botao-seletor">Voltar á home</button></a>
+        <div class="form_box">
+            <div class="seletor-tipo">
+                <button class="botao-seletor activite">Empresa</button>
+               <a href="usuariopost.html" ><button class="botao-seletor activite">Sou Usuário </button> </a>
+            </div>
+
+            
+            <form action='http://localhost:8080/Empresas/salvar' id="formulario" class="needs-validation">
+
+             <h2>Cadastro de Empresas</h2>
+            
+                    <label for="nome" class="form-label"></label>
+                    <input type="text" name="nome" placeholder="Razão Social" id="nome" class="form-control" required>
+              
+
+                 
+                        <label for="email" class="form-label"></label>
+                <input type="email" name="email" placeholder="Email de sua empresa"  id="email" class="form-control" required> 
+
+
+                <label for="cnpj" class="form-label"></label>
+                <input type="text" name="cnpj" placeholder="Digite o CNPJ de seu negócio" id="cnpj" class="form-control" required>
+
+                <label for="telefone" class="form-label"></label>
+                <input type="text" name="telefone" placeholder="Digite o telefone de contato"    id="telefone" class="form-control" required>
+
+
+  
+
+            
+
+                <button type="submit" id="submeter">Enviar</button>
+
+            </form>
+
+   
+
+        </div>
+
+
+    </div>
+
+    <script>
+        const btn = document.getElementById('submeter');
+              const form = document.getElementById('formulario');
+              var url = 'http://localhost:8080/Empresas/salvar'
+      
+              form.addEventListener('submit', async function (event) {
+      
+                  event.preventDefault(); // Evita que o navegador envie um GET
+      
+                  const formData = new FormData(form);
+                  console.log(formData);
+      
+                  const response = await fetch(url, {
+                      method: 'POST',
+                      headers: {
+                          'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify(Object.fromEntries(formData))
+                  });
+      
+                  if (response.ok) {
+                      alert('Registro inserido com sucesso. Em breve você receberá um retorno !');
+                      console.log(response);
+                  } else {
+                      alert('Erro ao inserir registro!');
+                  }
+              });
+          </script>
+      
+
+
+</body>
+</html>

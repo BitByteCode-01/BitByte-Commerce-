@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+*,
+::after, 
+::before{
+    
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(-120deg,
+    #09d, #6d6c6c);
+}
+
+body, textarea{font-family: sans-serif;}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.form_box{
+    display: flex;
+    flex-direction: column;
+    background-color:#fff;
+    color: #333;
+    border-radius: 8px;
+    width: 700px;
+    margin-bottom: 25px;
+}
+
+.form_box .title {
+    padding: 24px 32px;
+    font-size: 24px;
+    border-bottom: thin solid #ccc;
+}
+
+.form_box form{
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 32px;
+}
+
+.form_box input,
+.form_box textarea {
+    width: calc(50% - 8px);
+    height: 48px;
+    border-radius: 8px;
+    border: thin solid #999;
+    padding-left: 16px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    outline: none
+}
+
+.form_box input:first-child{
+    margin-right: 16px;
+}
+
+.form_box input[name=subject]{
+    width: 100%;
+
+}
+
+.form_box textarea{
+    width: 100%;
+    height: 180px;
+    padding: 16px;
+}
+.form_box button{
+    display: block;
+    border: none;
+    outline: none;
+    width: 180px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #09d;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form_box button:hover{
+    background-color: #0287c0;
+}
+.btn-select{
+    padding:20px 20px;
+    margin-top:10px;
+    margin: 10px;
+    cursor: pointer;
+    border:none;
+    border-radius: 10px;
+    transform:0.5s;
+    background-color: #09d;
+    color: #fff;
+    outline: none;
+    transition: background 0.3s ease;
+}
+.btn-select:hover{
+    background-color:#0287c0 
+}
+
+.form_box input:hover,
+.form_box input:focus,
+.form_box  textarea:hover,
+.form_box textarea:focus{
+    outline: none;
+    border-color:#09d;;
+}
+
+header {
+    background:#d9d9d9;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    height: 220px;
+}
+
+header img {
+    height: 200px;
+  }

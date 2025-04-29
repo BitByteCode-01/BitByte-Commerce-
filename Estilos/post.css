@@ -1,0 +1,65 @@
+.title{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: linear-gradient(120deg,
+   #F5F5DC , #3333 );
+
+}
+*{
+    ::after, 
+::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+}
+
+.botao-seletor{
+    padding:10px 20px;
+    margin:10px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 10px;
+transform:0.5s;
+}
+.botao-seletor:hover{
+background-color: blue;
+}
+
+.form_box{
+    max-width: 400px;
+    margin:20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+.form-control{
+    margin-bottom: 15px;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid black;
+    border-radius:4px ;
+}
+.img{
+   margin-top: 10px;
+  height:100px;
+  width: 200px;
+
+  
+   
+}
+.container{
+    margin-top: 90px;
+    font-size:30px
+}
+#enviar{
+    font-size: 20px;
+}
+#submeter{
+    font-size: 20px;
+}

@@ -1,0 +1,390 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  
+}
+html{
+  scroll-behavior: smooth;
+}
+
+
+
+/* Layout geral */
+body {
+    background-color:#F5F5DC;
+    color: #333;
+    line-height: 1.6;
+
+
+/* Cabeçalho */
+header {
+    background:#d9d9d9;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    height: 230px;
+}
+
+header img {
+  height: 200px;
+}
+
+nav {
+    background: #0056b3;
+    padding: 10px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    cursor:pointer;
+   
+
+}
+nav a:hover{
+  background-color: #444;
+  transform: scale(1.3,0.4);
+  transition: 0.3s;
+}
+
+
+
+.container {
+    max-width: 1100px;
+    margin:   auto;
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    padding: 40px;
+    background: #fff;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    
+}
+.colaboradores {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Mantém 3 colunas */
+  gap: 20px;
+  padding-left: 100px;
+  background-color: #f5f5f5;
+  max-width: 1200px;
+  margin-bottom:10px
+}
+
+#colaboradores{
+    padding-left: 350px;
+    margin-bottom:10px
+}
+.card {
+  text-align: center;
+  padding: 20px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 12px;
+  margin-right: 6px;
+  color: #333;
+}
+
+p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Estilo do nome e tooltip */
+.nome {
+  position: relative; /* Necessário para posicionar o tooltip */
+  cursor: pointer; /* Indica que é interativo */
+}
+
+.tooltip {
+  display: none; /* Esconde o tooltip por padrão */
+  position: absolute;
+  top: -120px; /* Posiciona acima do nome (ajuste conforme necessário) */
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  background-color: #fff; /* Fundo branco */
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Garante que fique acima de outros elementos */
+  text-align: left;
+  width: 200px; /* Largura fixa do tooltip */
+}
+
+.tooltip-foto {
+  width: 50px; /* Tamanho menor para a foto no tooltip */
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.tooltip p {
+  margin: 5px 0;
+  font-size: 12px;
+}
+
+/* Mostra o tooltip ao passar o mouse */
+.nome:hover .tooltip {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .colaboradores {
+    grid-template-columns: 1fr; /* 1 coluna em mobile */
+  }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service {
+    padding: 20px;
+    background: #e3e3e3;
+    border-radius: 5px;
+    cursor:pointer;
+}
+.fotos{
+    padding: 40px;
+    background: #fff;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider {
+    margin: 0px auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .slides {
+    width: 400%;
+    height: 400px;
+    display: flex;
+  }
+  
+  .slides input {
+    display: none;
+  }
+  
+  .slide {
+    width: 25%;
+    position: relative;
+    transition: 2s;
+  }
+  
+  .slide img {
+    width: 800px;
+    height: 400px;
+  }
+  
+  .manual-navigation {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .manual-btn {
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  } 
+  
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover {
+    background-color: #fff;
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -25%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -50%;
+  }
+
+  #radio4:checked ~ .first{
+    margin-left: -75%;
+  }
+  
+  .navigation-auto div{
+    
+    padding: 5px;
+
+  }
+  
+  .navigation-auto {
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+  }
+  
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #fff;
+  }
+  
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #fff;
+  }
+  
+  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #fff;
+  }
+  
+  .byter1 {
+    text-align: center;
+    color: orangered;
+  }
+  
+
+
+#cadastro{
+margin-bottom: 1px;
+}
+
+#BTN{
+background: #007bff;
+}
+#botao{
+background: #007bff;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px ;
+    background: #007bff;
+    color: #fff;
+    margin-top:10PX
+   
+    
+    
+}
+.rodape{
+    padding-right: 200px;
+    
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 1.5rem;
+    }
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+}
+/* Animação de destaque */
+@keyframes highlight {
+  0% { background-color: #e3f2fd; }
+  100% { background-color: #f8fbff; }
+}
+
+/* Efeito adicional para melhor visualização */
+/*section:target {
+  animation: highlight 1.5s ease-out;
+  border-left: 5px solid #0056b3;
+  background-color: #f8fbff;
+  position: relative;
+}
+
+section:target::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 10px rgba(0, 86, 179, 0.2);
+  pointer-events: none;
+}
+
+@keyframes highlight {
+  0% { background-color: #e3f2fd; }
+  100% { background-color: #f8fbff; }
+} */
+section.active {
+  animation: highlight 1.5s;
+  border-left: 5px solid #0056b3;
+  background-color: #f0f8ff;
+  box-shadow: 0 0 15px rgba(0, 86, 179, 0.3);
+}
+
+@keyframes highlight {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.01); }
+  100% { transform: scale(1); }
+}
+.h2{
+  color:#007bff
+}
