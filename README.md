@@ -9,5 +9,6 @@
  # Códigos usados neste repositório
  ![HTML](https://github.com/user-attachments/assets/3445911c-caa6-460b-8913-1b1beb395b9e)Como código base utilizamos o HTML para realizar todo o esqueleto e toda a base para o nosso site. 
 
- 
+ ![CSS](https://github.com/user-attachments/assets/6a84b5dc-8c9b-4790-9bea-493263c3d7e5)Para estilizar toda a nossa página utilizamos o CSS responsável por interagir e redimensionar toda a parte visual de nosso site
+
 
