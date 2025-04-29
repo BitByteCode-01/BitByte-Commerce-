@@ -5,4 +5,4 @@
 <br>_logo da BitByte Commerce_ 
 
   <hr>
- #Códigos usados neste repositório
+ # Códigos usados neste repositório
